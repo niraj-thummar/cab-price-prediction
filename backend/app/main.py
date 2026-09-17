@@ -81,7 +81,7 @@ async def general_exception_handler(request: Request, exc: Exception):
 # API Routes
 # ---------------------------------------------------------------------------
 @app.get(
-    "/",
+    "/api",
     response_model=HealthCheckResponse,
     summary="Root Health Check",
     tags=["Health"],
