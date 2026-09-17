@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Original huge ML model
+backend/artifacts/model_original.joblib
+
+# Environment
+.env
+venv/
+.venv/
+
+# Node
+node_modules/
+dist/

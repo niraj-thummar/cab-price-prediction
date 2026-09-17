@@ -1,0 +1,158 @@
+{
+  "model_type": "RandomForestRegressor",
+  "model_parameters": {
+    "n_estimators": 100,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "n_features": 49,
+  "feature_order": [
+    "distance",
+    "surge_multiplier",
+    "hour",
+    "day",
+    "month",
+    "temperature",
+    "precipIntensity",
+    "cab_type_Uber",
+    "name_Black SUV",
+    "name_Lux",
+    "name_Lux Black",
+    "name_Lux Black XL",
+    "name_Lyft",
+    "name_Lyft XL",
+    "name_Shared",
+    "name_UberPool",
+    "name_UberX",
+    "name_UberXL",
+    "name_WAV",
+    "source_Beacon Hill",
+    "source_Boston University",
+    "source_Fenway",
+    "source_Financial District",
+    "source_Haymarket Square",
+    "source_North End",
+    "source_North Station",
+    "source_Northeastern University",
+    "source_South Station",
+    "source_Theatre District",
+    "source_West End",
+    "destination_Beacon Hill",
+    "destination_Boston University",
+    "destination_Fenway",
+    "destination_Financial District",
+    "destination_Haymarket Square",
+    "destination_North End",
+    "destination_North Station",
+    "destination_Northeastern University",
+    "destination_South Station",
+    "destination_Theatre District",
+    "destination_West End",
+    "short_summary_ Drizzle ",
+    "short_summary_ Foggy ",
+    "short_summary_ Light Rain ",
+    "short_summary_ Mostly Cloudy ",
+    "short_summary_ Overcast ",
+    "short_summary_ Partly Cloudy ",
+    "short_summary_ Possible Drizzle ",
+    "short_summary_ Rain "
+  ],
+  "numeric_cols": [
+    "distance",
+    "surge_multiplier",
+    "hour",
+    "day",
+    "month",
+    "temperature",
+    "precipIntensity"
+  ],
+  "categorical_cols": [
+    "cab_type",
+    "name",
+    "source",
+    "destination",
+    "short_summary"
+  ],
+  "metrics": {
+    "mae": 1.1971,
+    "r2": 0.9583,
+    "rmse": 1.8063
+  },
+  "scaler_bounds": {
+    "distance": {
+      "min": 0.02,
+      "max": 5.4
+    },
+    "surge_multiplier": {
+      "min": 1.0,
+      "max": 3.0
+    },
+    "hour": {
+      "min": 0.0,
+      "max": 23.0
+    },
+    "day": {
+      "min": 1.0,
+      "max": 30.0
+    },
+    "month": {
+      "min": 11.0,
+      "max": 12.0
+    },
+    "temperature": {
+      "min": 18.91,
+      "max": 57.22
+    },
+    "precipIntensity": {
+      "min": 0.0,
+      "max": 0.1447
+    }
+  },
+  "supported_providers": [
+    "Uber",
+    "Lyft"
+  ],
+  "supported_products": {
+    "Uber": [
+      "UberX",
+      "UberXL",
+      "Black",
+      "Black SUV",
+      "UberPool",
+      "WAV"
+    ],
+    "Lyft": [
+      "Lyft",
+      "Lyft XL",
+      "Lux",
+      "Lux Black",
+      "Lux Black XL",
+      "Shared"
+    ]
+  },
+  "supported_locations": [
+    "Back Bay",
+    "Beacon Hill",
+    "Boston University",
+    "Fenway",
+    "Financial District",
+    "Haymarket Square",
+    "North End",
+    "North Station",
+    "Northeastern University",
+    "South Station",
+    "Theatre District",
+    "West End"
+  ],
+  "supported_weather": [
+    "Clear",
+    "Partly Cloudy",
+    "Mostly Cloudy",
+    "Overcast",
+    "Light Rain",
+    "Rain",
+    "Foggy",
+    "Drizzle",
+    "Possible Drizzle"
+  ]
+}
