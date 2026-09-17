@@ -126,7 +126,9 @@ def build_and_export():
     # Model training: match RandomForest.ipynb
     print("[CabPredict] Training RandomForestRegressor model...")
     model = RandomForestRegressor(
-        n_estimators=100,
+        n_estimators=30,
+        max_depth=15,
+        min_samples_leaf=2,
         random_state=42,
         n_jobs=-1,
     )
@@ -150,7 +152,9 @@ def build_and_export():
     metadata = {
         "model_type": "RandomForestRegressor",
         "model_parameters": {
-            "n_estimators": 100,
+            "n_estimators": 30,
+            "max_depth": 15,
+            "min_samples_leaf": 2,
             "random_state": 42,
             "n_jobs": -1
         },
